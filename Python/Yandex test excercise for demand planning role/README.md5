@@ -1,0 +1,54 @@
+This is a solution for Yandex's test excercise in python.
+
+The task:
+
+Rajesh Kuthrapali's family has a strange structure.
+Each man has a son first, then a daughter is born. For women the pattern is inversed: a daughter is born first, a son is second.
+Knowing that, Rajesh wants to predict the gender of the K-th child in the N-th offspring generation.
+You should write a program for this purpose.
+
+       M      1st generation
+      / \
+    M     F   2nd generation
+   / \   / \
+  M   F F   M
+        |
+        3rd child in the 3rd generation
+
+________
+
+Solution explained below
+_____________________
+Files description:
+
+The folder contains 2 files rajesh.py and rajesh_console.py.
+
+rajesh.py
+		- file contains python rajesh_tree class.
+
+rajesh_console.py
+		- file contains procedure for interactive search
+		of the gender of k-th descendand of Rajesh in n-th generation
+		Default gender of Rajesh is set to be Male.
+		Run the code in a python interpreter and follow the instructions.
+		Works only if rajesh.py located in the same folder
+___
+
+Features of rajesh_tree class:
+
+1. Default gender of Rajesh is set to be "M" for Male.
+You can set up Rajesh's gender by providing r_gender to the class's params.
+r_gender must be either "M" or "F".
+
+Example:
+r_male = rajesh_tree()
+r_female = rajesh_tree("F")
+
+2. Use rajesh_tree().c_search(n, k) for *cyclical* search of
+a k-th descendant's gender in n-th genration
+
+3. Use rajesh_tree().r_search(n, k) for *recursive* search of
+a k-th descendant's gender in n-th genration
+
+NB! Recursive search might not finish due to recursion limit
+if n is too high. It was created for exploration purposes only.
